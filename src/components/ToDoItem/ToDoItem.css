@@ -1,0 +1,41 @@
+.to-do-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  width: 60%;
+  background-color: white;
+  padding: 0.6rem;
+}
+
+.to-do-btns {
+  display: flex;
+  align-items: center;
+}
+
+.to-do-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.to-do-description {
+  font-size: 1.2rem;
+}
+
+.checkbox {
+  height: 3rem;
+  width: 2.5rem;
+  margin-right: 1rem;
+}
+
+.content {
+  width: 80%;
+}
+
+.delete {
+  height: 2.6rem;
+  width: 6.5rem;
+  background-color: rgb(65, 56, 65);
+  color: white;
+  border: none;
+  font-size: 1.3rem;
+}

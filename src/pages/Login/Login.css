@@ -1,0 +1,50 @@
+.outer-form-div {
+  margin-top: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  background-color: white;
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 2rem;
+}
+
+.input {
+  width: 90%;
+  height: 2.5rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+}
+
+.login {
+  margin-top: 1rem;
+  width: 8rem;
+  height: 2.5rem;
+  font-size: 1.3rem;
+  background-color: rgb(65, 56, 65);
+  color: white;
+  border: none;
+}
+
+.login:hover {
+  cursor: pointer;
+}
+
+.para {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
