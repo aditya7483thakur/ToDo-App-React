@@ -9,27 +9,43 @@ const Navbar = () => {
   const { isAuthenticated, setIsAuthenticated } = useContext(context);
 
   const logout = async () => {
-    try {
-      toast.loading("Logging Out..");
-      const response = await fetch(`${server}/users/logout`, {
-        method: "GET",
-        credentials: "include",
-      });
+    // try {
+    //   toast.loading("Logging Out..");
+    //   const response = await fetch(`${server}/users/logout`, {
+    //     method: "GET",
+    //     credentials: "include",
+    //   });
 
-      const json = await response.json();
-      console.log(json);
-      toast.dismiss();
-      if (json.success) {
+    //   const json = await response.json();
+    //   console.log(json);
+    //   toast.dismiss();
+    //   if (json.success) {
+    //     toast.success(json.message);
+    //     setIsAuthenticated(false);
+    //   } else {
+    //     toast.error("Some error occured !");
+    //     setIsAuthenticated(true);
+    //   }
+    // } catch (error) {
+    //   toast.success("Some error occured !");
+    //   setIsAuthenticated(true);
+    // }
+
+    toast.loading("Logging Out...");
+    fetch(`${server}/users/logout`, {
+      method: "GET",
+      credentials: "include",
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        toast.dismiss();
         toast.success(json.message);
         setIsAuthenticated(false);
-      } else {
-        toast.error("Some error occured !");
+      })
+      .catch((e) => {
         setIsAuthenticated(true);
-      }
-    } catch (error) {
-      toast.success("Some error occured !");
-      setIsAuthenticated(true);
-    }
+        toast.error(e);
+      });
   };
 
   return (
